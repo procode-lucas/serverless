@@ -2,9 +2,9 @@
 // spawn was recommended for long output, but md5sum is short, so exec is ok
 const { exec } = require("child_process");
 
-value = "teststring"
+    var test="queryStringParameters"
 
-if (!/^[a-z0-9 .-]*$/i.test("teststring")) {
+if (!/^[a-z0-9 .-]*$/i.test("queryStringParameters")) {
         console.log('Bad input for ' + input);
         callback(null, {
                 statusCode: 400,
