@@ -4,9 +4,7 @@ const { exec } = require("child_process");
 
 exports.handler = (event, handler, callback) => {
 
-   var test="queryStringParameters"
-
-if (!/^[a-z0-9 .-]*$/i.test(test)) {
+if (!/^[a-z0-9 .-]*$/i.test(exports.handler)) {
         console.log('Bad input for ' + input);
         callback(null, {
                 statusCode: 400,
