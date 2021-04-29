@@ -19,13 +19,6 @@ const { exec } = require("child_process");
         });
 }
 
-    if (input === '') {
-            callback(null, {
-                statusCode: 400,
-                body: "Please provide some input"
-            });
-        }
-
     // execute the full command
     exec(cmd, (error, stdout, stderr) => {
 
