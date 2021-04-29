@@ -4,9 +4,9 @@ const { exec } = require("child_process");
 
 exports.handler = (event, handler, callback) => {
     
-value = "teststring"
+value = "string"
 
-if (!/^[a-z0-9 .-]*$/i.test("teststring")) {
+if (!/^[a-z0-9 .-]*$/i.test("string")) {
         console.log('Bad input for ' + input);
         callback(null, {
                 statusCode: 400,
