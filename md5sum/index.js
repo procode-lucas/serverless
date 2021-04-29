@@ -2,17 +2,17 @@
 // spawn was recommended for long output, but md5sum is short, so exec is ok
 const { exec } = require("child_process");
 
-exports.handler = (event, handler, callback) => {
-    
-value = "string"
+value = "teststring"
 
-if (!/^[a-z0-9 .-]*$/i.test("string")) {
+if (!/^[a-z0-9 .-]*$/i.test("teststring")) {
         console.log('Bad input for ' + input);
         callback(null, {
                 statusCode: 400,
                 body: "Please provide only letters, numbers, periods, dashes, and spaces"
         });
 }
+
+exports.handler = (event, handler, callback) => {
 
     //var input = "test"
     var input = event.queryStringParameters.input.trim();
