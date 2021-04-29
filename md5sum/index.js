@@ -11,6 +11,14 @@ const { exec } = require("child_process");
     // added -n because echo includes a newline, causing md5sum to be wrong
     var cmd = 'echo -n "' + input + '" | md5sum | sed "s/ -//"';
 
+  if (!/^[a-z0-9 .-]*$/i.test(input)) {
+        console.log('Bad input for ' + input);
+        callback(null, {
+                statusCode: 400,
+                body: "Please provide only letters, numbers, periods, dashes, and spaces"
+        });
+}
+
     if (input === '') {
             callback(null, {
                 statusCode: 400,
